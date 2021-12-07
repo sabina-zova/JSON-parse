@@ -16,5 +16,5 @@ for name in names:
 config = json_extract(data_list, 'config')
 print(config)
 
-# TODO find a way to access data structures on upper levels
+
 
