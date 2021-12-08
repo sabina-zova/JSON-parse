@@ -21,7 +21,8 @@ for container in data:
                    [container['name'], json.dumps(container)])
     conn.commit()
 
-# cursor.execute('''SELECT json_extract(info, '$.epheremal') FROM data;''').fetchall()
+pprint(cursor.execute("SELECT json_extract(info, '$.status', '$.created_at',"
+                      "'$.state.cpu.usage', '$.state.memory.usage', '$.devices') FROM data").fetchall())
 
 
 
